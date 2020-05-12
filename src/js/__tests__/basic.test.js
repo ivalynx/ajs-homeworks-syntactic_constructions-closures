@@ -11,3 +11,11 @@ test('Должен найтись текст', () => {
     description: 'Страница описания элемента интерфейса',
   }]);
 });
+
+
+test('А теперь не должен найтись', () => {
+  const finder = findBy('name', 'кракозябра');
+  const results = commonBase.filter(finder);
+
+  expect(results).toEqual([]);
+});
